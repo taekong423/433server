@@ -16,7 +16,7 @@ namespace Ircc
         public short reserved;
 
 
-        public Header(short comm, short code, int size, short seqeunce = 0, short reserved = 0)
+        public Header(short comm, short code, int size, short seqeunce = 1, short reserved = 0)
         {
             this.comm = comm;
             this.code = code;
@@ -170,7 +170,7 @@ namespace Ircc
             header.comm = comm;
             header.code = code;
             header.size = bMsg.Length;
-            header.sequence = 0;
+            header.sequence = 1;
             header.reserved = 0;
 
             Packet packet;
@@ -224,7 +224,7 @@ namespace Ircc
             header.comm = comm;
             header.code = code;
             header.size = 0;
-            header.sequence = 0;
+            header.sequence = 1;
             header.reserved = 0;
 
             Packet packet;
